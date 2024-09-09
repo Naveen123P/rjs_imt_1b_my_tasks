@@ -83,7 +83,7 @@ class App extends Component {
       <div className="bg">
         <div className="task-create-div">
           <h1 className="heading-yellow">Create a task!</h1>
-          <form onSubmit={this.onSubmitForm}>
+          <form className="form" onSubmit={this.onSubmitForm}>
             <div className="task-div">
               <label htmlFor="task" className="label">
                 Task
@@ -104,6 +104,7 @@ class App extends Component {
                 id="tags"
                 name="tags"
                 value={tag}
+                className="select input"
                 onChange={this.onChangeTag}
               >
                 {tagsList.map(each => (
@@ -122,37 +123,39 @@ class App extends Component {
             </button>
           </form>
         </div>
-        <div className="tags-list-div">
-          <h1 className="heading-white">Tags</h1>
+        <div className="tags-tasks-div">
+          <div className="tags-list-div">
+            <h1 className="heading-white">Tags</h1>
 
-          <ul className="tags-list">
-            {tagsList.map(each => (
-              <TagItem
-                key={each.optionId}
-                details={each}
-                changeTag={this.changeTag}
-                isActive={each.optionId === activeOptionId}
-              />
-            ))}
-          </ul>
-        </div>
-        <div className="task-list-div">
-          <h1 className="heading-white">Tasks</h1>
-
-          {filteredTasks.length === 0 ? (
-            <p className="empty">No Tasks Added Yet</p>
-          ) : (
-            <ul className="tasks-list">
-              {filteredTasks.map(each => (
-                <li className="task-item">
-                  <p className="task-test">{each.task}</p>
-                  <button className="tag-button" type="button">
-                    {each.tag}
-                  </button>
-                </li>
+            <ul className="tags-list">
+              {tagsList.map(each => (
+                <TagItem
+                  key={each.optionId}
+                  details={each}
+                  changeTag={this.changeTag}
+                  isActive={each.optionId === activeOptionId}
+                />
               ))}
             </ul>
-          )}
+          </div>
+          <div className="task-list-div">
+            <h1 className="heading-white">Tasks</h1>
+
+            {filteredTasks.length === 0 ? (
+              <p className="empty">No Tasks Added Yet</p>
+            ) : (
+              <ul className="tasks-list">
+                {filteredTasks.map(each => (
+                  <li className="task-item">
+                    <p className="task-test">{each.task}</p>
+                    <button className="tag-button" type="button">
+                      {each.tag}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
       </div>
     )

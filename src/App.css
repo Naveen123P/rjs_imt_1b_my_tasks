@@ -10,3 +10,98 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.bg {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+}
+.task-create-div {
+  height: 100%;
+  width: 45vw;
+  background-color: #1a171d;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading-yellow {
+  color: #f3aa4e;
+  text-align: center;
+}
+label {
+  color: #ffffff;
+}
+.input {
+  height: 2.5rem;
+  width: 40vw;
+  background-color: #ffffff;
+  color: #000000;
+  display: block;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.submit-button {
+  height: 2.5rem;
+  width: 7rem;
+  background-color: #f3aa4e;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+.tags-tasks-div {
+  height: 100%;
+  width: 55vw;
+  padding: 2rem 0.2rem 2rem 0.2rem;
+  background-color: #000000;
+}
+.tags-list-div {
+}
+.heading-white {
+  color: #ffffff;
+}
+.empty {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 25%;
+}
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0%;
+}
+.task-item {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  margin-top: 10px;
+  background-color: #1a171d;
+}
+.task-test {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.tag-button {
+  height: 2rem;
+  padding: 0.4rem;
+  border-radius: 3rem;
+  color: #131213;
+  font-weight: bold;
+  border: 2px solid #f3aa4e;
+  background-color: #f3aa4e;
+}
+.task-div,
+.tags-div {
+  width: 100%;
+  margin-top: 2rem;
+}
